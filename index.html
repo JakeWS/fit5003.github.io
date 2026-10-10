@@ -1,5 +1,31 @@
-   <form action="http://localhost:5000/transfer" method="POST" id="f">
-     <input name="to" value="bob">
-     <input name="amount" value="500">
-   </form>
-   <script>document.getElementById('f').submit();</script>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div class="cols">
+      <h2>Vulnerable</h2>
+      <div class="target">http://localhost:5000 — vulnerable</div>
+      <form action="http://localhost:5000/transfer" method="POST" target="_blank" id="f5000">
+        <input type="hidden" name="to" value="bob">
+        <input type="hidden" name="amount" value="500">
+        <button type="submit" class="btn vuln">Claim reward (A)</button>
+      </form>
+  </div>
+
+  <div>
+    <h2>Fixed</h2>
+    <div class="target">http://localhost:5001 — fixed</div>
+    <form action="http://localhost:5001/transfer" method="POST" target="_blank" id="f5001">
+      <input type="hidden" name="to" value="bob">
+      <input type="hidden" name="amount" value="500">
+      <button type="submit" class="btn fix">Claim reward (B)</button>
+    </form>
+  </div>
+
+  <p class="note">Open DevBank in another tab and log in first, then click each button
+  and compare the two result tabs against each account's balance.</p>
+</body>
+</html>
